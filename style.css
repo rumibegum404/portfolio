@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: #0f172a;
+  background-color: #f8fafc;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 1) HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #0f172a;
+  padding: 48px 0;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f59e0b;
+  margin-bottom: 12px;
+}
+
+.hero .title {
+  font-size: 1.25rem;
+  color: #f59e0b;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.hero .tagline {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 32px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #f59e0b;
+  color: #0f172a;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #f59e0b;
+  border: 2px solid #f59e0b;
+}
+
+/* 2) ABOUT */
+.about {
+  padding: 64px 0;
+  background-color: #fff;
+}
+
+.about h2 {
+  font-size: 1.75rem;
+  color: #0f172a;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.about p {
+  font-size: 1.1rem;
+  color: #0f172a;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 3) SKILLS */
+.skills {
+  padding: 64px 0;
+  background-color: #f8fafc;
+}
+
+.skills h2 {
+  font-size: 1.75rem;
+  color: #0f172a;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.skill-box {
+  background: #fff;
+  border: 2px solid #f59e0b;
+  border-radius: 8px;
+  padding: 24px 16px;
+  text-align: center;
+  font-weight: 600;
+  color: #0f172a;
+  font-size: 1rem;
+}
+
+/* 4) PROJECTS - desktop: 2 columns */
+.projects {
+  padding: 64px 0;
+  background-color: #fff;
+}
+
+.projects h2 {
+  font-size: 1.75rem;
+  color: #0f172a;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: #f8fafc;
+  border: 1px solid #0f172a;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.project-card h3 {
+  font-size: 1.1rem;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #0f172a;
+  margin-bottom: 16px;
+}
+
+.project-card .btn {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
+
+/* 5) CONTACT */
+.contact {
+  padding: 64px 0;
+  background-color: #0f172a;
+  color: #fff;
+}
+
+.contact h2 {
+  font-size: 1.75rem;
+  color: #f59e0b;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.contact-info {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.contact-info p {
+  margin-bottom: 4px;
+  color: #fff;
+}
+
+.contact-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 12px 16px;
+  border: 2px solid #f59e0b;
+  border-radius: 8px;
+  width: 100%;
+  margin-bottom: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.contact-form .btn {
+  width: 100%;
+  background-color: #f59e0b;
+  color: #0f172a;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 0.9rem;
+  background-color: #0f172a;
+  color: #f59e0b;
+}
+
+/* 1 media query: mobile = project cards 1 column */
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
